@@ -12,7 +12,8 @@
     <!-- 视图解析器 -->
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/c01hello/"/>
+        <!--<property name="prefix" value="/c01hello/"/>-->
+        <property name="prefix" value="/c02controller/"/>
         <property name="suffix" value=".jsp"></property>
     </bean>
 </beans>

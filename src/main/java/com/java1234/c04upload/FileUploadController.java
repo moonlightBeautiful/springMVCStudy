@@ -15,6 +15,8 @@ public class FileUploadController {
     @RequestMapping("/uploadFile")
     public String uploadFile(@RequestParam("file") MultipartFile file, HttpServletRequest request) throws Exception {
 //        String filePath = request.getServletContext().getRealPath("/");
+        String name = request.getParameter("name");
+        System.out.println("name:" + name);
         String filePath = "E:\\upload\\";
         System.out.println(filePath);
         File dir = new File(filePath);
@@ -28,6 +30,8 @@ public class FileUploadController {
     @RequestMapping("/uploadFiles")
     public String uploadFiles(@RequestParam("file") MultipartFile[] files, HttpServletRequest request) throws Exception {
 //        String filePath = request.getServletContext().getRealPath("/");
+        String name = request.getParameter("name");
+        System.out.println("name:" + name);
         String filePath = "E:\\upload\\";
         System.out.println(filePath);
         File dir = new File(filePath);

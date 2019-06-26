@@ -35,6 +35,7 @@
             </td>
         </tr>
     </table>
+    <input type="text" name="name" value="阿丽塔">
 </form>
 </body>
 </html>

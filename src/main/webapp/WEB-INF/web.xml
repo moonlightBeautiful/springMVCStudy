@@ -6,6 +6,7 @@
     <display-name>SpringMvc01</display-name>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
     <servlet>
@@ -18,7 +19,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <!-- Spring编码过滤器 -->

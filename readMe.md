@@ -21,3 +21,13 @@ SpringMVC的复习
             out.println(o.toString());
             out.flush();
             out.close();
+3.对rest风格的url的支持
+    1.rest风格的url是：项目/模块/状态/参数
+    2.@PathVariable("路径的参数")：可以把路径上的参数取下来
+4.对静态资源的处理
+    1.静态资源直接访问不对，需要从新映射一下
+5.对文件上传的支持 
+    1.引入需要的2个jar包
+    2.在配置文件中配置上传的bean和限制
+    3.jsp页面form添加enctype="multipart/form-data"
+    4.单文件上传@RequestParam("file") MultipartFile file和多文件上传@RequestParam("file") MultipartFile[] files

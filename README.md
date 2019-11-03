@@ -1,9 +1,12 @@
 SpringMVC的复习
 1.hello 
-    pom文件引入jar包
-    webxml文件配置核心分发器
-    引入spring的配置文件
-    写页面和控制器
+   简介：
+        MVC框架，功能强大、性能强悍。
+   编码：
+        pom文件引入jar包
+        webxml文件配置核心分发器
+        引入spring的配置文件
+        写页面和控制器
 2.控制器@Controller
     1.@requestmapping：放在类或者方法上，映射请求的路径。
     2.@RequestParam：绑定请求的参数到方法的入参上，默认必须

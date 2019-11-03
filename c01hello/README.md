@@ -1,0 +1,9 @@
+SpringMVC的复习
+hello 
+   简介：
+        MVC框架，功能强大、性能强悍。
+   编码：
+        pom文件引入jar包
+        webxml文件配置核心分发器
+        引入spring的配置文件
+        写页面和控制器

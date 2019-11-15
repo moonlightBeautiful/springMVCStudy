@@ -3,7 +3,10 @@ hello
    简介：
         MVC框架，功能强大、性能强悍。
    编码：
-        pom文件引入jar包
-        webxml文件配置核心分发器
-        引入spring的配置文件
-        写页面和控制器
+        1.pom文件引入jar包
+        2.web.xml文件配置核心分发器DispatcherServlet
+        3.引入spring的配置文件
+        4.写页面和控制器
+   注解
+        @Controller：用在类上，组件注解
+        @RequestMapping("/hello")：用在类或者方法上，映射请求。

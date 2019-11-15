@@ -1,4 +1,4 @@
-package com.java1234.c02controller;
+package com.java1234.model;
 
 public class Student {
 

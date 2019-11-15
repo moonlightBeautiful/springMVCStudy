@@ -16,7 +16,8 @@ SpringMVC的复习
     6.重定向和转发请求：方法的返回类型是String， 
                return "redirect:/student/list.do";
                return "forward:/student/list.do";
-     7.对servlet、api的支持，参数上写request和response对象
+     7.对servlet、api的支持，参数上写request和response、session对象
+            HttpServletRequest  HttpServletResponse  HttpSession
      8.@ResponseBody：把返回的类型转成json字符串
         一般不用这个，用
             response.setContentType("text/html;charset=utf-8");

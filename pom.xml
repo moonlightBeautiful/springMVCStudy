@@ -10,6 +10,9 @@
     <modules>
         <module>c01hello</module>
         <module>c02controller</module>
+        <module>c03restful</module>
+        <module>c04fileupload</module>
+        <module>c00workingGet</module>
     </modules>
     <packaging>pom</packaging>
 

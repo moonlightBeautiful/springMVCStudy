@@ -13,12 +13,12 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- 使用注解的包，包括子集 -->
-    <context:component-scan base-package="com.java1234"/>
+    <context:component-scan base-package="com.ims"/>
 	
 	<mvc:annotation-driven/>
 	
 	<mvc:resources mapping="/resources/images/**" location="/images/"/>
-	
+
 	<mvc:resources mapping="/resources/css/**" location="/css/"/>
 
 	

@@ -1,4 +1,4 @@
-package com.java1234.controller;
+package com.ims.controller;
 
 import java.io.File;
 

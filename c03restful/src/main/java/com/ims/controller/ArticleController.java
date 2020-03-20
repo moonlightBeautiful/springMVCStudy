@@ -1,4 +1,4 @@
-package com.java1234.controller;
+package com.ims.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.java1234.model.Article;
+import com.ims.model.Article;
 
 @Controller
 @RequestMapping("/article")

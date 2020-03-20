@@ -13,9 +13,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- 使用注解的包，包括子集 -->
-    <context:component-scan base-package="com.java1234"/>
+    <context:component-scan base-package="com.ims"/>
 
-	<!-- 支持对象与json的转换。 -->
+	<!-- 支持开启很多功能，其一是支持使用@RequestBody、@ResponseBody。 -->
     <mvc:annotation-driven/> 
 
     <!-- 视图解析器 -->

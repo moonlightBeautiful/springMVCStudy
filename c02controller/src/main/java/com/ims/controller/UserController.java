@@ -1,4 +1,4 @@
-package com.java1234.controller;
+package com.ims.controller;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.java1234.model.User;
+import com.ims.model.User;
 
 @Controller
 @RequestMapping("/user")
@@ -40,7 +40,8 @@ public class UserController {
 	}
 	
 	@RequestMapping("/ajax")
-	public @ResponseBody User ajax(){
+	@ResponseBody
+	public User ajax(){
 		User user=new User("zhangsan","123");
 		return user;
 	}

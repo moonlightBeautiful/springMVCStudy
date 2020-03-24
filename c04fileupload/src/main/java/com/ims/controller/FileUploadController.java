@@ -12,21 +12,23 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class FileUploadController {
 
-    @RequestMapping("/upload")
-    public String uploadFile(@RequestParam("file1") MultipartFile file1, HttpServletRequest request) throws Exception {
-        String filePath = request.getServletContext().getRealPath("/"); //µÃµ½µÄÊÇ£ºÄ³ÅÌ\...\ÏîÄ¿Â·¾¶\
+    @RequestMapping("/upload1")
+    public String uploadFile(@RequestParam("file") MultipartFile file1, HttpServletRequest request) throws Exception {
+        String filePath = request.getServletContext().getRealPath("/"); //å¾—åˆ°çš„æ˜¯ï¼šæŸç›˜\...\é¡¹ç›®è·¯å¾„\
         System.out.println(filePath);
+        System.out.println("æè¿°ï¼š" + request.getParameter("desc"));
         file1.transferTo(new File(filePath + "upload/" + file1.getOriginalFilename()));
         return "redirect:success.html";
     }
 
     @RequestMapping("/upload2")
     public String uploadFiles(@RequestParam("file") MultipartFile[] files, HttpServletRequest request) throws Exception {
-        String filePath = request.getServletContext().getRealPath("/");//µÃµ½µÄÊÇ£ºÄ³ÅÌ\...\ÏîÄ¿Â·¾¶\    ÏîÄ¿µÄÕæÊÇÂ·¾¶
+        String filePath = request.getServletContext().getRealPath("/");//å¾—åˆ°çš„æ˜¯ï¼šæŸç›˜\...\é¡¹ç›®è·¯å¾„\    é¡¹ç›®çš„çœŸæ˜¯è·¯å¾„
         System.out.println(filePath);
-        System.out.println(request.getContextPath());  //Îª¿Õ×Ö·û´®£¬ÎªÉ¶£¬ÒòÎªÎÒÃ»ÓĞÅäÖÃÏîÄ¿context  localhost:8080/×ÊÔ´µØÖ·£¬Ã»ÓĞÏîÄ¿context
+        System.out.println("æè¿°ï¼š" + request.getParameter("desc"));
+        System.out.println(request.getContextPath());  //ä¸ºç©ºå­—ç¬¦ä¸²ï¼Œä¸ºå•¥ï¼Œå› ä¸ºæˆ‘æ²¡æœ‰é…ç½®é¡¹ç›®context  localhost:8080/èµ„æºåœ°å€ï¼Œæ²¡æœ‰é¡¹ç›®context
         for (MultipartFile file : files) {
-            if(file.isEmpty()){
+            if (file.isEmpty()) {
                 continue;
             }
             file.transferTo(new File(filePath + "upload/" + file.getOriginalFilename()));

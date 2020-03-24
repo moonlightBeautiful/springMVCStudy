@@ -15,34 +15,34 @@ import com.ims.model.User;
 @RequestMapping("/user")
 public class UserController {
 
-	@RequestMapping("/login")
-	public String login(HttpServletRequest request,HttpServletResponse response){
-		System.out.println("----登录验证---");
-		String userName=request.getParameter("userName");
-		String password=request.getParameter("password");
-		Cookie cookie=new Cookie("user",userName+"-"+password);
-		cookie.setMaxAge(1*60*60*24*7);
-		User currentUser=new User(userName,password);
-		response.addCookie(cookie);
-		HttpSession session=request.getSession();
-		session.setAttribute("currentUser", currentUser);
-		return "redirect:/main.jsp";
-	}
-	
-	@RequestMapping("/login2")
-	public String login2(HttpServletRequest request){
-		return "redirect:/main.jsp";
-	}
-	
-	@RequestMapping("/login3")
-	public String login3(HttpSession session){
-		return "redirect:/main.jsp";
-	}
-	
-	@RequestMapping("/ajax")
-	@ResponseBody
-	public User ajax(){
-		User user=new User("zhangsan","123");
-		return user;
-	}
+    @RequestMapping("/login")
+    public String login(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("----登录验证---");
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
+        Cookie cookie = new Cookie("user", userName + "-" + password);
+        cookie.setMaxAge(1 * 60 * 60 * 24 * 7);
+        User currentUser = new User(userName, password);
+        response.addCookie(cookie);
+        HttpSession session = request.getSession();
+        session.setAttribute("currentUser", currentUser);
+        return "redirect:/main.jsp";
+    }
+
+    @RequestMapping("/login2")
+    public String login2(HttpServletRequest request) {
+        return "redirect:/main.jsp";
+    }
+
+    @RequestMapping("/login3")
+    public String login3(HttpSession session) {
+        return "redirect:/main.jsp";
+    }
+
+    @RequestMapping("/ajax")
+    @ResponseBody
+    public User ajax() {
+        User user = new User("zhangSan", "123");
+        return user;
+    }
 }
